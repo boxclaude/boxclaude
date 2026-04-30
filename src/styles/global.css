@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--bg: #0D0D10;
+	--bg-transparent: #0D0D10e0;
+	--bg-card: #131318;
+	--bg-card-2: #18181F;
+	--border: #22222C;
+	--border-bright: #2E2E3C;
+	--primary: #818CF8;
+	--primary-rgb: 129, 140, 248;
+	--accent: var(--primary);
+	--accent-dim: rgba(var(--primary-rgb), 0.1);
+	--accent-glow: rgba(var(--primary-rgb), 0.2);
+	--accent-border: rgba(var(--primary-rgb), 0.25);
+	--text: #EEEEF2;
+	--text-muted: #7A7A90;
+	--text-dim: #5E5E6F;
+	--red: #F87171;
+	--red-dim: rgba(248, 113, 113, 0.08);
+	--radius: 10px;
+}
+
+/* 
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+} */
+
+.primary {
+	color: var(--primary)
+}
+
+#app {
+	margin: 0 auto;
+	width: 100%;
+	/* max-width: clamp(60%, 1200px, 95%); */
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #2a2a35;
+	border-radius: 2px;
+}
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #2a2a35 transparent;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	background: var(--bg);
+	color: var(--text);
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+footer {
+	width: 100%;
+}
+
+nav,
+section {
+	width: 100%;
+}
+
+section {
+	padding: 100px 32px;
+}
+
+.section-inner {
+	position: relative;
+	margin: 0 auto;
+	max-width: 1120px;
+}
+
+.section-header {
+	margin-bottom: 56px;
+	text-align: center;
+}
+
+.section-label {
+	color: var(--accent);
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	margin-bottom: 12px;
+	text-transform: uppercase;
+}
+
+.section-header h2 {
+	font-size: clamp(28px, 4vw, 40px);
+	font-weight: 700;
+	letter-spacing: -0.025em;
+	line-height: 1.15;
+	margin-bottom: 12px;
+}
+
+.section-sub {
+	color: var(--text-muted);
+	font-size: 17px;
+	margin: 0 auto;
+	max-width: 520px;
+}
+
+.btn-install {
+	align-items: center;
+	background: var(--accent);
+	border: none;
+	border-radius: 7px;
+	color: #0D0D10;
+	cursor: pointer;
+	display: inline-flex;
+	font-size: 14px;
+	font-weight: 600;
+	gap: 6px;
+	padding: 8px 18px;
+	transition: opacity 0.15s, transform 0.15s;
+}
+
+.btn-install:hover {
+	opacity: 0.88;
+	transform: translateY(-1px);
+}
+
+.btn-install.large {
+	border-radius: 9px;
+	font-size: 16px;
+	padding: 14px 28px;
+}
+
+@media (max-width: 800px) {
+	section {
+		padding: 72px 20px;
+	}
+}
+
+/* codicon reset */
+.codicon {
+	font-size: 18px;
+	line-height: 1;
+}
