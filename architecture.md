@@ -28,6 +28,23 @@ Desktop: `grid-template-columns: 1fr clamp(280px, 33%, 380px)` — image left, t
 
 Mobile (<800px): single column, slides use `height: 0 / height: auto` to show only active slide (carousel override).
 
+## FeaturesSection
+
+9 feature cards in a 2-column grid (`grid-template-columns: repeat(2, 1fr)`):
+- Box by folder or file
+- Folder dependency graph *(was "Dependency graph")*
+- File dependency graph *(new)*
+- Call hierarchy *(new)*
+- Cyclic dependency detection
+- Max line number *(new)*
+- Private to your machine
+- Context menu integration
+- Visual Box badges
+
+## SolutionSection Data (`src/data/solutions.js`)
+
+9 slides (was 8). Slide 09 shows `boxclaude-configuration.png` — VSCode settings panel for toggling call hierarchy, file graph, folder graph, and max line length output.
+
 ## Nav
 
 `position: sticky; top: 0` — scrolls with page until top, then sticks. No offset padding needed in hero.

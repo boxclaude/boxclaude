@@ -1,3 +1,4 @@
+import ssCfg from '../../screenshots/boxclaude-configuration.png'
 import ss00a from '../../screenshots/00-set-the-folder-as-claude-box.png'
 import ss00b from '../../screenshots/00-the-specify-box-save-to-CLAUDE.local.md.png'
 import ss01 from '../../screenshots/01-add-a-folder-to-box.png'
@@ -9,7 +10,7 @@ import ss12 from '../../screenshots/12-detect-cyclic-dependencies.png'
 
 export const solutions = [
 	{
-		num: '01 / 08',
+		num: '01 / 09',
 		screenshot: ss00a,
 		alt: 'Set folder as Claude Box',
 		title: 'Right-click to set your Box',
@@ -18,7 +19,7 @@ export const solutions = [
 		size: 111, cx: 12, cy: 91, px: 18, py: 82
 	},
 	{
-		num: '02 / 08',
+		num: '02 / 09',
 		screenshot: ss00b,
 		alt: 'Box saved to CLAUDE.local.md',
 		title: 'Your scope, persisted and private',
@@ -27,7 +28,7 @@ export const solutions = [
 		size: 66, cx: 17, cy: 6, px: 25, py: 2
 	},
 	{
-		num: '03 / 08',
+		num: '03 / 09',
 		screenshot: ss01,
 		alt: 'Add folder to Box',
 		title: 'Expand your Box on demand',
@@ -36,7 +37,7 @@ export const solutions = [
 		size: 101, cx: 12, cy: 75, px: 23, py: 76
 	},
 	{
-		num: '04 / 08',
+		num: '04 / 09',
 		screenshot: ss02,
 		alt: 'Add individual file to Box',
 		title: 'Surgical precision — one file at a time',
@@ -45,7 +46,7 @@ export const solutions = [
 		size: 100, cx: 14, cy: 88, px: 33, py: 88
 	},
 	{
-		num: '05 / 08',
+		num: '05 / 09',
 		screenshot: ss03,
 		alt: 'Claude becomes more oriented',
 		title: 'Claude becomes oriented to your work',
@@ -55,7 +56,7 @@ export const solutions = [
 		transform: 'translate(0, 0)'
 	},
 	{
-		num: '06 / 08',
+		num: '06 / 09',
 		screenshot: ss10,
 		alt: 'Set Box in dependency graph',
 		title: 'See your dependencies, set your Box',
@@ -64,7 +65,7 @@ export const solutions = [
 		size: 105, cx: 15, cy: 94, px: 30, py: 94
 	},
 	{
-		num: '07 / 08',
+		num: '07 / 09',
 		screenshot: ss11,
 		alt: 'Add file from dependency graph',
 		title: 'Click to scope from the graph',
@@ -73,12 +74,21 @@ export const solutions = [
 		size: 104, cx: 38, cy: 44, px: 47, py: 44
 	},
 	{
-		num: '08 / 08',
+		num: '08 / 09',
 		screenshot: ss12,
 		alt: 'Detect cyclic dependencies',
 		title: 'Catch cycles before Claude does',
 		pain: 'Claude can thrash in circular logic when it encounters dependency cycles — endless changes, no progress.',
 		fix: 'BoxClaude detects and highlights cyclic dependencies in red. Fix your architecture first — then let Claude in.',
 		size: 150, cx: 55, cy: 36, px: 66, py: 36
+	},
+	{
+		num: '09 / 09',
+		screenshot: ssCfg,
+		alt: 'BoxClaude configuration settings',
+		title: 'Configure what appends to your scope',
+		pain: 'Graphs and call hierarchies are powerful but you don\'t always want all of them written into CLAUDE.local.md.',
+		fix: 'Toggle each feature independently in VSCode settings — call hierarchy, file graph, folder graph, and max line length.',
+		size: 120, cx: 50, cy: 50, px: 50, py: 50
 	},
 ]

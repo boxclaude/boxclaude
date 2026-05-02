@@ -5,10 +5,10 @@
                 <div class="section-label error" style="color: var(--red);">The Problem</div>
                 <h2>Developers are losing control of Claude Code</h2>
 				
-                <p class="section-sub">Bill, climbing</p>
-                <p class="section-sub">Architecture, getting messier</p>
-                <p class="section-sub">New features in big projects, running in circles</p>
-				<p class="section-sub">The codebase, growing like a snowball rolling downhill</p>
+                <p class="section-sub">Bill, climbing <i class="codicon codicon-arrow-up prob-icon anim-up" /></p>
+                <p class="section-sub">Architecture, getting messier <i class="codicon codicon-debug prob-icon anim-appear" /></p>
+                <p class="section-sub">New features in big projects, running in <i class="codicon codicon-sync prob-icon anim-rotate" /></p>
+				<p class="section-sub">The codebase, growing like a snowball rolling downhill <i class="codicon codicon-circle-large-filled prob-icon anim-roll" /></p>
             </div>
 
             <Carousel :items="problems" :interval="5000" track-height="380px">
@@ -48,6 +48,57 @@ import { problems } from '../data/problems.js'
 <style>
 #problem {
     background: linear-gradient(to bottom, var(--bg), #080810 50%, var(--bg));
+}
+
+.prob-icon {
+    color: var(--red);
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+@keyframes moveUp {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes bugAppear {
+    0%   { opacity: 0; transform: scale(0.2); }
+    15%  { opacity: 1; transform: scale(1); }
+    45%  { opacity: 1; transform: scale(1); }
+    55%  { opacity: 0; transform: scale(0); }
+    100% { opacity: 0; transform: scale(0); }
+}
+
+@keyframes rotateSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes snowRoll {
+    0%   { opacity: 0; transform: translate(-6px, -6px) scale(0.2) rotate(0deg); }
+    12%  { opacity: 1; }
+    80%  { opacity: 1; transform: translate(6px, 6px) scale(1) rotate(360deg); }
+    100% { opacity: 0; transform: translate(6px, 6px) scale(1) rotate(400deg); }
+}
+
+.anim-up {
+    animation: moveUp 1.4s ease-in-out infinite;
+}
+
+.anim-appear {
+    animation: bugAppear 2.8s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.anim-rotate {
+    animation: rotateSpin 1.2s linear infinite;
+}
+
+.anim-roll {
+    animation: snowRoll 2.4s ease-in-out infinite;
+    color: #7ec8e3;
+    transform-origin: center;
 }
 
 

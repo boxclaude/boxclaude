@@ -29,14 +29,19 @@ import GridDots from './GridDots.vue'
 
 const features = [
     {
-        icon: 'folder',
+        icon: 'package',
         title: 'Box by folder or file',
         desc: 'Set your scope at any granularity — an entire module, a handful of files, or one single source file.',
     },
     {
         icon: 'type-hierarchy-sub',
         title: 'Dependency graph',
-        desc: 'Visualize your codebase as an interactive graph. Pan, zoom, explore before you decide what Claude sees.',
+        desc: 'Visualize folder and file-level import relationships as an interactive graph. Pan, zoom, explore before you decide what Claude sees.',
+    },
+    {
+        icon: 'list-flat',
+        title: 'Call hierarchy',
+        desc: 'Inspect function-level call chains within your codebase. Understand who calls what before Claude starts editing.',
     },
     {
         icon: 'sync-ignored',
@@ -52,12 +57,8 @@ const features = [
         icon: 'list-tree',
         title: 'Context menu integration',
         desc: 'Right-click any file or folder in the VSCode Explorer. Add, remove, or reset your Box in one click.',
-    },
-    {
-        icon: 'eye',
-        title: 'Visual Box badges',
-        desc: 'Files in your Box are marked with a ◆ badge in the Explorer — always know what\'s in scope at a glance.',
-    },
+    }
+    
 ]
 </script>
 
